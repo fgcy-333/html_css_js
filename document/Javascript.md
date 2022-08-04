@@ -29,16 +29,16 @@ Java的目标程序以.class形式存在（二进制文件），不能使用文�
 
 网景公司1998年被美国在线收购。
 
-网景公司最著名的就是领航者浏览器：Navigator浏览器。
+网景公司最著名的就是领航者浏览器：`Navigator`浏览器。
 
-LiveScript的出现，最初的时候是为Navigator浏览器量身定制一门语言，不支持其他浏览器。
+`LiveScript`的出现，最初的时候是为`Navigator浏览器`量身定制一门语言，不支持其他浏览器。
 
 当Navigator浏览器使用非常广泛的时候，微软害怕了，于是微软在最短的时间内组建了一个团队，
-开始研发只支持IE浏览器的脚本语言，叫做JScript。
+开始研发只支持`  IE浏览器 ` 的`脚本语言`，叫做`JScript`。
 
 JavaScript和JScript并存的年代，程序员是很痛苦的，因为程序员要写两套程序。
-在这种情况下，有一个非营利性组织站出来了，叫做ECMA组织（欧洲计算机协会）
-ECMA根据JavaScript制定了ECMA-262号标准，叫做ECMA-Script。
+在这种情况下，有一个非营利性组织站出来了，叫做  `ECMA组织`（欧洲计算机协会）
+ECMA根据JavaScript制定了ECMA-262号标准，叫做`ECMA-Script`。
 
 现代的javascript和jscript都实现了ECMA-Script规范。（javascript和jscript统一了）
 
@@ -48,7 +48,7 @@ ECMA根据JavaScript制定了ECMA-262号标准，叫做ECMA-Script。
 
 **以后大家会学习一个叫做JSP的技术，JSP和JS有啥区别？**
 
-​	JSP : JavaServer Pages（隶属于Java语言的，运行在JVM当中，本质上是一个java类servlet，实现了javaee的servlet接口）
+​	JSP : `JavaServer Pages`（隶属于Java语言的，运行在JVM当中，本质上是一个java类servlet，实现了javaee的servlet接口）
 
 ​	JS : JavaScript（运行在浏览器上）
 
@@ -59,7 +59,7 @@ ECMA根据JavaScript制定了ECMA-262号标准，叫做ECMA-Script。
 
 
 
-javascript是一种基于事件驱动型的编程语言,一般都是依靠事件来触发Js代码执行的。
+javascript是一种基于 ` 事件驱动型`  的编程语言,`一般都是依靠事件`来  触发  Js代码执行的。
 
 
 
@@ -87,9 +87,11 @@ javascript是一种基于事件驱动型的编程语言,一般都是依靠事件
 
 3、在Js当中  **任何一个事件**  都有  对应的  一个  **事件句柄**。所有的事件句柄都是在  事件名称  前面  添加 `on`
 
-例如:click对应的事件句柄onclickdbl
+例如:
 
-click对应的事件句柄ondblclick
+click对应的事件句柄onclick
+
+dbclick对应的事件句柄ondblclick
 
 focus对应的事件句柄是: onfocus
 
@@ -101,9 +103,9 @@ blur对应的事件句柄是:onblur
 
 
 
-5、 onclick后面的js代码什么时候执行呢?
+5、 `onclick后面的js代码`  什么时候执行呢?
 
-不会在页面打开时执行，只有当有当鼠标单击click事件发生之后才会执行这个JS代码。
+`不会在` **页面打开时执行**，只有当有当鼠标单击click事件发生之后才会执行这个JS代码。
 
 
 
@@ -164,7 +166,7 @@ blur对应的事件句柄是:onblur
 
 
 
-## 第二种方式（在Script中书写js代码）
+## 第二种方式（在Script块中书写js代码）
 
 ~~~html
 
@@ -203,7 +205,7 @@ window.alert("first.......");
 
 			/*
 				暴露在脚本块当中的程序，在页面打开的时候执行，
-				并且遵守自上而下的顺序依次逐行执行。（这个代
+				并且遵守自上而下（包括html）的顺序依次逐行执行。（这个代
 				码的执行不需要事件）
 			*/
 			window.alert("Hello World!"); // alert函数会阻塞整个HTML页面的加载。
@@ -267,7 +269,8 @@ window.alert("last.......");
 			// window.alert("Test");
 		</script>
 
-        
+    </body>
+    	<!--这里的代码可以执行-->
 		<script type="text/javascript">
 			alert("hello jack!");
 		</script>
@@ -281,9 +284,11 @@ window.alert("last.......");
 
 # 三、JS中的变量
 
-回顾java中的变量：
+## 回顾java中的变量：
 
-1、java中怎么定义 声明变量？
+
+
+1、java中怎么  **定义** 声明变量？
 			`	数据类型 变量名;`
 例如：
 
@@ -299,8 +304,7 @@ window.alert("last.......");
 
 2、java中的变量怎么赋值？
 					使用“=”运算符进行赋值运算。（"="运算符右边先执行，将右边执行的结果赋值给左边的变量）
-					变量名 = 值;
-					例如：
+例如：
 
 ~~~
 			i = 10;
@@ -310,11 +314,12 @@ window.alert("last.......");
 
 
 
-3、java语言是一种强类型语言，强类型怎么理解？
+3、java语言是一种`强类型语言`，强类型怎么理解？
 					java语言存在编译阶段，假设有代码：int i;
 					那么在Java中有一个特点是：java程序编译阶段就已经确定了i变量的数据类型，该i变量的数据类型在编译阶段是int类型，
-					那么这个变量到最终内存释放，一直都是int类型，不可能变成其他类型。
-				
+					那么  **这个变量**  到`  最终内存释放`，一直都是int类型，不可能变成其他类型。
+
+例如：
 
 ~~~
 		int i = 10;
@@ -325,19 +330,22 @@ window.alert("last.......");
 
 
 
-`		i = "abc"; `这行代码编译的时候会报错，因为i变量的数据类型是int类型，不能将字符串赋给i。
+`		i = "abc";  `  这行代码编译的时候会报错，因为i变量的数据类型是int类型，不能将字符串赋给i。
 
-java中要求变量声明的时候是什么类型，以后永远都是这种类型，不可变。编译期强行固定变量的数据类型。称为强类型语言。
+java中要求变量声明的时候是什么类型，以后永远都是这种类型，不可变。`编译期`  ` 强行固定变量`的  **数据类型**。称为**强类型语言**。
 
 
 
-​	javascript当中的变量？		怎么声明变量？
+## JS中的变量
 
-​	`	var 变量名;`
+javascript当中的变量？怎么声明变量？
+
+`	var 变量名;`
 
 怎么给变量赋值？
-			`变量名 = 值;`
-javascript是一种弱类型语言，没有编译阶段，一个变量可以随意赋值，赋什么类型的值都行。
+`变量名 = 值;`
+
+javascript是一种 ` 弱类型语言`，**没有编译阶段**，一个变量可以随意赋值，赋什么类型的值都行。
 
 		var i = 100;
 		i = false;
@@ -345,9 +353,15 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
 		i = new Object();
 		i = 3.14;		
 
-重点：javascript是一种   **弱类型**  编程语言。
+重点：
+
+javascript是一种   **弱类型**  编程语言。
 
 
+
+
+
+例子：
 
 ~~~html
 <!DOCTYPE html>
@@ -362,13 +376,16 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
 
 		   // 在JS当中,当一个变量没有手动赋值的时候,系统默认赋值undefined
 		   var i;
-		   // undefined 在JS中是一个具体存在值.
+		   // undefined 在JS中是一个   具体  存在值.
 		   alert("i = " + i); // i = undefined
 		   
 		   alert(undefined);
 		   var k = undefined;
 		   alert("k = " + k);
 		   
+            
+            
+            
 		   // 一个变量没有声明/定义,直接访问?
 		   // alert(age); //语法错误：age is not defined (变量age不存在。不能这样写)
 		   
@@ -394,11 +411,441 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
 
 
 
+## 全局变量与局部变量
+
+全局变量：
+在  `函数体之外`  声明的变量 ` 属于全局变量`(只要不带 类型 如：var let  ，无论在哪里声明，都是全局变量)
+
+全局变量的生命周期是：
+		浏览器打开时声明，**浏览器关闭时销毁**，尽量少用。因为全局变量会一直在浏览器的内存当中，耗费内存空间。
+		能使用局部变量尽量使用局部变量。
+
+局部变量：
+		在函数体当中声明的变量，包括一个函数的形参都属于局部变量，
+		局部变量的生命周期是：函数开始执行时局部变量的内存空间开辟，`函数执行结束 `之后，`局部变量的内存空间释放`。
+		局部变量生命周期较短。
+
+~~~html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS的局部变量和全局变量</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		   
+		   // 全局变量
+		   var i = 100;
+		   
+		   function accessI(){
+			   // 访问的是全局变量
+			   alert("i = " + i);
+		   }
+		   
+		   accessI();
+		   
+		   // 全局变量
+		   var username = "jack";
+		   function accessUsername(){
+			   // 局部变量
+			   var username = "lisi";
+			   // 就近原则:访问局部变量
+			   alert("username = " + username);
+		   }
+		   // 调用函数
+		   accessUsername();
+		   // 访问全局变量
+		   alert("username = " + username);
+		   
+		   function accessAge(){
+			   var age = 20;
+			   alert("年龄 = " + age);
+		   }
+		   
+		   accessAge();
+		   
+		   // 报错(语法不对)
+		   // alert("age = " + age);
+		   
+		   // 以下语法是很奇怪的.
+		   function myfun(){
+			   // 当一个变量声明的时候没有使用var关键字,那么不管这个变量是在哪里声明的,都是全局变量.
+			   myname = "dujubin";
+		   }
+		   
+		   // 访问函数
+		   myfun();
+		   
+		   alert("myname = " + myname); // myname = dujubin
+		   
+		</script>
+	</body>
+</html>
+
+~~~
 
 
 
 
-# 四、JS中的函数
+
+
+
+# 四、JS中的数据类型
+
+## 4.1 总体概述
+
+1、虽然JS中的变量在声明的时候不需要指定数据类型，但是在赋值，每一个数据还是有类型的，所以
+
+这里也需要学习一下JS包括哪些数据类型
+
+JS中数据类型有：`原始类型、引用类型` **ES6之前一共六种**
+
+​         原始类型：`Undefined、Number、String、Boolean、Null`
+​         引用类型：`Object以及Object的子类`
+
+
+
+2、ES规范(ECMAScript规范)，在ES6之后，又基于以上的6种类型之外添加了一种新的类型：
+
+​	`	Symbol`
+
+
+
+
+
+3、JS中有一个运算符叫做`typeof`，这个运算符可以在 ` 程序的运行阶段`  **动态的获取 **  `变量的数据类型`。
+
+​      typeof运算符的语法格式：
+​          `typeof 变量名`
+
+
+
+typeof运算符的运算结果是以下 ` 6个字符串之一`：注意 ` 字符串`  都是**全部小写**。
+
+```
+   "undefined"
+   "number"
+   "string"
+   "boolean"
+   "object"
+   "function"
+```
+
+
+
+4、在JS当中  `比较字符串`  是否相等   **使用“==”完成**。**没有equals**。
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>JS中的数据类型</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+         
+         /*
+         // 求和,要求a变量和b变量将来的数据类型必须是数字,不能是其他类型
+         // 因为以下定义的这个sum函数是为了完成两个数字的求和.
+         function sum(a, b){
+            if(typeof a == "number" && typeof b == "number"){
+               return a + b;
+            }
+            alert(a + "," + b + "必须都为数字！");
+         }
+         
+         // 别人去调用以上你写的sum函数.
+         var retValue = sum(false, "abc");
+         alert(retValue); // undefined  因为函数是弹出窗口，而没有返回值，所以是undefine
+         
+         var retValue2 = sum(1, 2);
+         alert(retValue2); // 3
+         */
+        
+          
+          
+          
+          
+          
+        //js typeof运算符的六种值
+        var i;
+        alert(typeof i); // "undefined"
+        
+        var k = 10;
+        alert(typeof k); // "number"
+        
+        var f = "abc";
+        alert(typeof f); // "string"
+        
+        var d = null;
+        alert(typeof d); // "object"  【null属于Null类型,但是typeof运算符的结果是"object"】
+        
+        var flag = false;
+        alert(typeof flag); // "boolean"
+        
+        var obj = new Object();
+        alert(typeof obj); // "object"
+        
+        // sayHello是一个函数.
+        function sayHello(){
+           
+        }
+        alert(typeof sayHello); // "function"
+        
+         
+      </script>
+   </body>
+</html>
+```
+
+
+
+## 4.2 Undefine
+
+Undefined是一种类型，该类型只有只有一个值，这个值就是 undefined；不要用单引号或者是双引号括着，不然类型就变成字符串了；
+
+当一个变量没有手动赋值，系统默认赋值undefined或者也可以给一个变量手动赋值undefined。
+
+​	
+
+例子：
+
+~~~html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Undefined类型</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+		   var i; // undefined
+		   var k = undefined; // undefined
+		   
+		   alert(i == k); // true
+		   
+		   var y = "undefined"; // "undefined"
+		   alert(y == k); // false
+		   
+		</script>
+		
+	</body>
+</html>
+
+~~~
+
+
+
+## 4.3 Menber
+
+1、Number类型包括哪些值？
+
+~~~
+ -1 0 1 2 2.3 3.14 100 .... NaN Infinity
+~~~
+
+
+
+整数、小数、正数、负数、不是数字、无穷大都属于Number类型。
+
+
+
+2、isNaN() : 
+
+​	结果是true表示不是一个数字，结果是false表示是一个数字。
+
+3、parseInt()函数
+
+4、parseFloat()函数
+
+5、Math.ceil() 函数（Math是数学类，数学类当中有一个函数叫做ceil()，作用是向上取整）
+
+
+
+
+
+例子：
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Number类型</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+
+         var v1 = 1;
+         var v2 = 3.14;
+         var v3 = -100;
+         var v4 = NaN;
+         var v5 = Infinity;
+         
+         // "number"
+         alert(typeof v1);
+         alert(typeof v2);
+         alert(typeof v3);
+         alert(typeof v4);
+         alert(typeof v5);
+         
+          
+          
+         // 关于NaN (表示Not a Number，不是一个数字，但属于Number类型)
+         // 什么情况下结果是一个NaN呢？
+         // 运算结果本来应该是一个数字,最后算完不是一个数字的时候,结果是NaN.
+         var a = 100;
+         var b = "中国人";
+         alert(a / b); // 除号显然最后结果应该是一个数字,但是运算的过程中导致最后不是一个数字,那么最后的结果是NaN
+         
+         var e = "abc";
+         var f = 10;
+         alert(e + f); // "abc10"
+         
+          
+          
+          
+         // Infinity (当除数为0的时候，结果为无穷大)
+         alert(10 / 0);
+         
+          
+          
+         // 思考:在JS中10 / 3 = ?
+         alert(10 / 3); // 3.3333333333333335
+         
+          
+          
+          
+         // 关于isNaN函数？
+         // 用法：isNaN(数据) ,结果是true表示不是一个数字, 结果是false表示是一个数字.
+         // isNaN : is Not a Number 
+         function sum(a, b){
+            if(isNaN(a) || isNaN(b)){
+               alert("参与运算的必须是数字！");
+               return;
+            }
+            return a + b;
+         }
+         sum(100, "abc");
+         alert(sum(100, 200));
+         
+          
+          
+          
+         // parseInt():可以将字符串自动转换成数字,并且取整数位.
+         alert(parseInt("3.9999")); // 3
+         alert(parseInt(3.9999)); // 3
+         
+          
+          
+          
+         // parseFloat():可以将字符串自动转换成数字.
+         alert(parseFloat("3.14") + 1); // 4.14
+         alert(parseFloat("3.2") + 1); // 4.2
+         
+          
+          
+          
+         // Math.ceil()
+         alert(Math.ceil("2.1")); // 3
+         
+      </script>
+   </body>
+</html>
+```
+
+
+
+## 4.4 Boolean
+
+ 1、 JS中的布尔类型永远都只有两个值：true和false （这一点和java相同）
+
+2、在Boolean类型中有一个函数叫做：Boolean()。
+
+ 语法格式：  `  Boolean(数据) `
+
+ Boolean()函数  的  **作 用是 ** 将`非布尔类型   转换   成布尔类型`。
+
+
+
+规律:“有"就转换成true,"没有"就转换成false.
+
+```js
+	alert(Boolean(1)); // true
+    alert(Boolean(0)); // false
+    alert(Boolean("")); // false
+    alert(Boolean("abc")); // true
+    alert(Boolean(null)); // false
+    alert(Boolean(NaN)); // false
+    alert(Boolean(undefined)); // false
+    alert(Boolean(Infinity)); // true
+```
+
+注意了：if括号中的类型必须是Boolean类型；所以当里面的类型不是Boolean类型时，会自动调用Boolean方法，转化为Boolean类型的值
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Boolean类型</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+
+         // var username = "lucy";
+         var username = "";
+         
+         /*
+         if(Boolean(username)){//false
+            alert("欢迎你" + username);
+         }else{
+            alert("用户名不能为空！");
+         }
+         */
+        
+        /*
+         if(username){
+            alert("欢迎你" + username);
+         }else{
+            alert("用户名不能为空！");
+         }
+         */
+        
+
+         
+         /*
+         while(10 / 3){//true
+            alert("hehe");
+         }
+         */
+         
+         for(var i = 0; i < 10; i++){
+            alert("i = " + i);
+         }
+         
+          
+          
+          
+          
+         // Null类型只有一个值,null
+         alert(typeof null); // "object"
+         
+      </script>
+   </body>
+</html>
+```
+
+
+
+# 、JS中的函数
 
   1、JS中的函数：
                等同于java语言中的方法，函数也是一段可以被重复利用的代码片段。
@@ -458,9 +905,11 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
 
 注意：
 
-函数必须调用，不然不会执行；
+1、形参不用指定类型；
 
-在script块中，函数定义的优先级较高（即使函数调用在上，函数定义在下，函数依旧可以执行）
+2、函数必须调用，不然不会执行；
+
+3、在script块中，函数定义的优先级较高（即使函数调用在上，函数定义在下，函数依旧可以执行）
 
 ```html
 <!DOCTYPE html>
@@ -493,7 +942,7 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
          sayHello("zhangsan");//hellozhangsan
          sayHello();//helloundefine
       </script>
-      
+      <!--事件句柄中写js代码-->
       <input type="button" value="hello" onclick="sayHello('jack');" /> 
       <input type="button" value="计算10和20的求和" onclick="sum(10, 20);" />
       
@@ -543,7 +992,7 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
          }
          
          /*
-         在JS当中，函数的名字不能重名，当函数重名的时候，后声明的函数会将之前声明的同名函数覆盖。
+         在JS当中，函数的名字 不能重名 ，当函数重名的时候，后声明的函数会将之前声明的同名函数覆盖。
          */
          function test1(){
             alert("test1 test1");
@@ -558,7 +1007,7 @@ javascript是一种弱类型语言，没有编译阶段，一个变量可以随�
 
 
 
-# 五、JS中的事件
+# 、JS中的事件
 
  JS中的事件：
            blur失去焦点   
